@@ -62,6 +62,11 @@
 	font-size: 24px;
 }
 
+.products-section,
+.products-header {
+	border: 1px solid blue;
+}
+
 .product-link {
 	text-decoration: none !important;
 }

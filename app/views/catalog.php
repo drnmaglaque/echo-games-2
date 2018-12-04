@@ -9,6 +9,20 @@ require_once("../partials/start_body.php"); ?>
 	<main id="main" class="role">
 		<div class="container">
 			<section class="row my-5">
+
+				<div class="col-md-3 mb-5">
+					<h2 class="text-center">COLLECTIONS</h2>
+				</div>
+				<div class="col-md-9">
+					<div class="input-group">
+						<input id="search-form" type="text" name="search" class="form-control" placeholder="Search Item">
+						<div class="input-group-append">
+							<span class="input-group-text" id="search-icon"><i class="fas fa-search"></i></span>
+						</div>
+					</div>
+				</div>
+			
+			
 				<div class="category-container col-md-3">
 					<ul class="list-group">
 					  <?php foreach($categories as $category): ?>
