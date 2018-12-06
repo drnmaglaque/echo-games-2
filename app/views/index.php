@@ -1,4 +1,5 @@
 <?php 
+
 $pageTitle = "Echo Games";
 require_once("../partials/start_body.php") ?>
 	<?php require_once("../partials/navbar.php") ?>

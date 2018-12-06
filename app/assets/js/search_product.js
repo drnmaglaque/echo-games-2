@@ -1,3 +1,5 @@
+import { displayCardItems, listCardItems } from "./function_templates.js";
+
 $(document).ready(function() {
 
 	const searchForm = $("#search-form");
@@ -15,30 +17,20 @@ $(document).ready(function() {
 	function getResults(jsondata) {
 		if(jsondata !== "") {
 			const result = JSON.parse(jsondata);
-			console.log(result);
-
 			let cardColumns = ``;
-			let listItems = ``;
-			result.forEach(function(item) {
-				listItems += `
-					<div class="card">
-					  <img class="card-img-top" src="../assets/images/${item.image}" alt="Card image cap">
-					  <div class="card-body">
-					    <h5 class="card-title">${item.name}</h5>
-					    <p class="card-text">PHP ${item.price}</p>
-					    <a href="#" class="btn btn-sm btn-outline-primary">Add To Cart</a>
-					  </div>
-					</div>
-				`;
+			listCardItems.template = ``;
+
+			result.forEach(displayCardItems);
 				cardColumns = `
 					<div class="card-columns">
-						${listItems}
+						${listCardItems.template}
 					</div>
 				`;
 				$(".products-container").html(cardColumns);
-			});
+			} else {
+				$(".products-container").html("There's nothing to show");
+			};
 		}
-	} 
 	});
 
 });

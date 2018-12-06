@@ -1,4 +1,8 @@
 $(document).ready(function() {
+
+
+	$("#notif-session").fadeOut(3000).delay(3000);
+
 	const main = $("#main");
 	const mainOffset = main.offset();
 
@@ -12,6 +16,5 @@ $(document).ready(function() {
 	    header.removeClass("fixed-top");
 	    main.removeClass("fixed-void");
 	  }
-	  
 	});
 });
