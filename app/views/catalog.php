@@ -44,7 +44,7 @@ require_once("../partials/start_body.php"); ?>
 							    <p class="card-text">PHP <?php echo $item["price"] ?></p>
 
 							    <input id="input_qty" type="number" name="" class="form-control mb-2 qty-field" value="1">
-							    <button data-id="<?php echo $item['id'] ?>" class="add-cart btn btn-sm btn-outline-primary">Add To Cart</button>
+							    <button data-id="<?php echo $item['id']; ?>" class="add-cart btn btn-sm btn-outline-primary">Add To Cart</button>
 
 							  </div>
 							</div>
